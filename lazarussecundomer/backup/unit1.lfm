@@ -1,0 +1,111 @@
+object StopWatch: TStopWatch
+  Left = 487
+  Height = 268
+  Top = 180
+  Width = 338
+  Anchors = [akTop, akLeft, akRight, akBottom]
+  Caption = 'StopWatch'
+  ClientHeight = 268
+  ClientWidth = 338
+  Constraints.MaxHeight = 768
+  Constraints.MaxWidth = 1366
+  Constraints.MinHeight = 268
+  Constraints.MinWidth = 338
+  LCLVersion = '2.2.4.0'
+  object Time: TLabel
+    Left = 80
+    Height = 47
+    Top = 16
+    Width = 197
+    Anchors = []
+    AutoSize = False
+    Caption = '00:00:00 000'
+    Constraints.MaxHeight = 47
+    Constraints.MaxWidth = 197
+    Constraints.MinHeight = 47
+    Constraints.MinWidth = 197
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -35
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object ButtonStart: TButton
+    Left = 128
+    Height = 25
+    Top = 128
+    Width = 96
+    Anchors = [akTop, akBottom]
+    Caption = 'Старт'
+    Constraints.MaxHeight = 25
+    Constraints.MaxWidth = 96
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 96
+    OnClick = ButtonStartClick
+    TabOrder = 0
+  end
+  object ButtonStop: TButton
+    Left = 128
+    Height = 25
+    Top = 160
+    Width = 96
+    Anchors = [akTop, akBottom]
+    Caption = 'Стоп'
+    Constraints.MaxHeight = 25
+    Constraints.MaxWidth = 96
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 96
+    OnClick = ButtonStopClick
+    TabOrder = 1
+  end
+  object ButtonContinue: TButton
+    Left = 128
+    Height = 25
+    Top = 200
+    Width = 96
+    Anchors = [akTop, akBottom]
+    Caption = 'Продолжить'
+    Constraints.MaxHeight = 25
+    Constraints.MaxWidth = 96
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 96
+    OnClick = ButtonContinueClick
+    TabOrder = 2
+    Visible = False
+  end
+  object Dio: TStaticText
+    Left = 88
+    Height = 16
+    Top = 88
+    Width = 177
+    Anchors = [akTop, akBottom]
+    Constraints.MaxHeight = 16
+    Constraints.MaxWidth = 177
+    Constraints.MinHeight = 16
+    Constraints.MinWidth = 177
+    TabOrder = 3
+  end
+  object BitBtnExit: TBitBtn
+    Left = 240
+    Height = 26
+    Top = 232
+    Width = 92
+    Anchors = [akRight, akBottom]
+    Constraints.MaxHeight = 26
+    Constraints.MaxWidth = 92
+    Constraints.MinHeight = 26
+    Constraints.MinWidth = 92
+    DefaultCaption = True
+    Kind = bkClose
+    ModalResult = 11
+    TabOrder = 4
+  end
+  object Timer: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = TimerTimer
+    Left = 288
+    Top = 152
+  end
+end
